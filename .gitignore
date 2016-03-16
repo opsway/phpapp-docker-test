@@ -1,0 +1,7 @@
+.idea
+composer.phar
+composer.lock
+phpunit.xml
+vendor/
+public/media/
+!public/media/zf-logo2.png
