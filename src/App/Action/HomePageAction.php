@@ -9,7 +9,6 @@ use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Diactoros\Response\JsonResponse;
 use Zend\Expressive\Router;
 use Zend\Expressive\Template;
-use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageAction
 {
@@ -21,9 +20,12 @@ class HomePageAction
      */
     private $container;
 
-    public function __construct(Router\RouterInterface $router, Template\TemplateRendererInterface $template = null, $container = null)
-    {
-        $this->router   = $router;
+    public function __construct(
+        Router\RouterInterface $router,
+        Template\TemplateRendererInterface $template = null,
+        $container = null
+    ) {
+        $this->router = $router;
         $this->template = $template;
         $this->container = $container;
     }

@@ -27,3 +27,11 @@ You can then browse to http://localhost:8080.
 $ composer check
 ```
 
+## Running with docker
+
+Before start you should have working docker.
+
+If using docker-machine run `eval $(docker-machine env)`
+
+1. Build images, install project dependencies and run existing tests: `./init.sh`
+2. Start local server: `docker-compose up -d nginx` 

@@ -1,0 +1,15 @@
+php-fpm:
+  build: ./docker/php-fpm
+  ports:
+    - "9000:9000"
+  volumes:
+    - "./:/app"
+
+nginx:
+  build: ./docker/nginx
+  volumes:
+    - "./:/app"
+  links:
+    - php-fpm
+  ports:
+    - "8080:80"
