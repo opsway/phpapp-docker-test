@@ -20,5 +20,10 @@ return [
             Application::class => ApplicationFactory::class,
             Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
         ],
+
+        'abstract_factories' => [
+            Zend\Cache\Service\StorageCacheAbstractServiceFactory::class,
+            Zend\Db\Adapter\Adapter::class => Zend\Db\Adapter\AdapterServiceFactory::class,
+        ],
     ],
 ];

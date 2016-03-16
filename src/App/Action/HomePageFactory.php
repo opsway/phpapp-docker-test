@@ -14,7 +14,7 @@ class HomePageFactory
         $template = ($container->has(TemplateRendererInterface::class))
             ? $container->get(TemplateRendererInterface::class)
             : null;
-        $config = $container->get('config');
-        return new HomePageAction($router, $template, $config['some_param_for_app']);
+
+        return new HomePageAction($router, $template, $container);
     }
 }
