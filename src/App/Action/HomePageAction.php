@@ -53,7 +53,7 @@ class HomePageAction
         // Persistent (Filesystem) cache
         $cacheSlow = $this->container->get('Cache\Persistence');
 
-        $adapter = $this->container->get('Zend\Db\Adapter\Adapter');
+        //$adapter = $this->container->get('Zend\Db\Adapter\Adapter');
 
         return new HtmlResponse($this->template->render('app::home-page', $data));
     }

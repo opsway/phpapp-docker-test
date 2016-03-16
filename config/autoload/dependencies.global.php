@@ -23,7 +23,7 @@ return [
 
         'abstract_factories' => [
             Zend\Cache\Service\StorageCacheAbstractServiceFactory::class,
-            Zend\Db\Adapter\Adapter::class => Zend\Db\Adapter\AdapterServiceFactory::class,
+            //Zend\Db\Adapter\Adapter::class => Zend\Db\Adapter\AdapterServiceFactory::class,
         ],
     ],
 ];
