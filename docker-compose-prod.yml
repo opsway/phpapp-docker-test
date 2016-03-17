@@ -1,0 +1,30 @@
+mysql:
+  image: mysql:5.7
+  environment:
+    MYSQL_DATABASE: phpapp
+    MYSQL_USER: phpapp
+    MYSQL_PASSWORD: phpapp
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+redis:
+    image: redis:3
+
+php-fpm:
+  image: phpapp/php-fpm
+  links:
+    - mysql
+    - redis
+  environment:
+    REDIS_HOST: redis
+    REDIS_PORT: 6379
+    MYSQL_DSN: mysql:host=localhost
+    MYSQL_DATABASE: phpapp
+    MYSQL_PASSWORD: phpapp
+    MYSQL_USER: phpapp
+
+nginx:
+  image: phpapp/nginx
+  links:
+    - php-fpm
+  ports:
+    - "9080:80"
