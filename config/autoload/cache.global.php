@@ -15,9 +15,10 @@ if (extension_loaded('redis')) {
         'adapter' => 'redis',
         'ttl' => 60,
         'plugins' => [
-            'exception_handler' => [
-                'throw_exceptions' => true,
-            ],
+            // todo:  Plugin 'exception_handler' not found
+//            'exception_handler' => [
+//                'throw_exceptions' => true,
+//            ],
         ],
         'options' => [
             'server' => [
