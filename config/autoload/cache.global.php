@@ -21,8 +21,8 @@ if (extension_loaded('redis')) {
         ],
         'options' => [
             'server' => [
-                'host' => '127.0.0.1',
-                'port' => '6379',
+                'host' => $_ENV['REDIS_HOST'],
+                'port' => $_ENV['REDIS_PORT'],
             ],
         ]
     ];

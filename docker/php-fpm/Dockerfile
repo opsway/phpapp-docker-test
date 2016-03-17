@@ -25,5 +25,7 @@ RUN pecl install redis \
 
 RUN curl -sS https://getcomposer.org/installer |  php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN echo "date.timezone=\"UTC\"" > /usr/local/etc/php/conf.d/timezone.ini
+
 RUN mkdir /app
 WORKDIR /app

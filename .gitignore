@@ -5,3 +5,4 @@ phpunit.xml
 vendor/
 public/media/
 !public/media/zf-logo2.png
+.env
