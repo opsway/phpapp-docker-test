@@ -27,5 +27,11 @@ RUN curl -sS https://getcomposer.org/installer |  php -- --install-dir=/usr/loca
 
 RUN echo "date.timezone=\"UTC\"" > /usr/local/etc/php/conf.d/timezone.ini
 
-RUN mkdir /app
+#RUN mkdir -p /app/data/cache && chown www-data:www-data /app/data/cache
+#VOLUME /app/data/cache
+
+# local dev
+VOLUME /app
+RUN usermod -u 1000 www-data
+
 WORKDIR /app
