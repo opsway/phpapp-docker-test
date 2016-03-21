@@ -6,7 +6,7 @@ set -e
 # cleanup from previous build
 PHP_IMAGE=`docker build -q ./docker/php`
 
-PHP="docker run -it --rm
+PHP="docker run -i --rm
        -v $(pwd):/app
        -w /app
        ${PHP_IMAGE}"
